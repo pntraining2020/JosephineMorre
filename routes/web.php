@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('/user/{id}', 'HomeController@user')->name('user');
+Route::post('/user', 'HomeController@save')->name('save');
